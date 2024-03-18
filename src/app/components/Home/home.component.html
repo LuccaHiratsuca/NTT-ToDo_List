@@ -1,1 +1,19 @@
-<p>home works!</p>
+<p>Home works!</p>
+
+<div *ngIf="tasksService.tasks.length === 0">
+  <p class="alert alert-danger">
+    No tasks found!
+  </p>
+</div>
+
+<div *ngIf="tasksService.tasks.length > 0">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of tasksService.tasks; index as i">
+        {{ task.title }}
+        
+        <button class="btn btn-danger" (click)="tasksService.deleteTask(i)">
+            Delete
+        </button>
+    </li>
+  </ul>
+
