@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
   addTask() {
     if (!this.newTask.title) return;
@@ -54,11 +55,12 @@ export class HomeComponent implements OnInit {
     this.renderer.setStyle(document.body, 'overflow', 'hidden');
   }
 
-  private hideModal() {
+  public hideModal() {
     this.renderer.removeClass(this.updateModal.nativeElement, 'show');
     this.renderer.removeStyle(this.updateModal.nativeElement, 'display');
     this.renderer.setAttribute(this.updateModal.nativeElement, 'aria-hidden', 'true');
     this.renderer.removeStyle(document.body, 'overflow');
   }
+  
 
 }

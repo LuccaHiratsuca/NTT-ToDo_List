@@ -42,16 +42,16 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="updateTaskModalLabel">Update Task</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="updateTaskModalLabel">Update Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="hideModal()" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <input type="text" [(ngModel)]="editableTask.title" placeholder="Title" class="form-control">
-            <input type="text" [(ngModel)]="editableTask.description" placeholder="Description" class="form-control mt-2">
+                <input type="text" [(ngModel)]="editableTask.title" placeholder="Title" class="form-control">
+                <input type="text" [(ngModel)]="editableTask.description" placeholder="Description" class="form-control mt-2">
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" (click)="updateTask()">Save changes</button>
+                <button type="button" class="btn btn-secondary" (click)="hideModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="updateTask()">Save changes</button>
             </div>
         </div>
         </div>
