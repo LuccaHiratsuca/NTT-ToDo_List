@@ -1,9 +1,100 @@
-/* Custom styles for buttons and icons for better alignment and spacing */
+/* Container and Overall Layout */
+.container {
+    max-width: 800px; /* Adjust based on your preference */
+    margin: auto;
+}
+
+/* Titles and Text */
+h1 {
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #6c757d; /* Bootstrap secondary text color */
+}
+
+/* Task Items */
+.list-group-item {
+    margin-bottom: 10px; /* Adds space between tasks */
+    border-radius: 0.5rem; /* Rounded corners for a softer look */
+    border: 1px solid #f0f0f0; /* Light border for each task */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.list-group-item:hover {
+    transform: scale(1.02); /* Slightly enlarge task items on hover */
+}
+
+/* Status Badge */
+.badge {
+    font-weight: normal; /* Less bold */
+}
+
+/* Buttons and Icons */
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-danger {
+    margin: 0 5px; /* Consistent spacing around buttons */
+}
+
+.btn-sm i {
+    margin-right: 4px; /* Space between icon and button text, if you add text */
+}
+
+/* Input and Modal Styles */
+input[type="text"], .modal-body {
+    margin-bottom: 15px; /* Spacing after each input */
+}
+
+.modal-content {
+    border-radius: 0.5rem; /* Rounded corners for the modal */
+}
+
+.modal-header, .modal-footer {
+    border-bottom: none; /* Remove default borders */
+    border-top: none; /* Remove default borders in footer */
+}
+
+/* Additional Styling for Modal Header */
+.modal-title {
+    color: #007bff; /* Use Bootstrap's primary color */
+}
+
+.btn-close {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg); /* Enhance close button visibility */
+}
+
+/* Form Control Enhancement */
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+}
+
+/* Adjust Button Padding for Better Touch Interaction */
+.btn {
+    padding: 0.5rem 1rem; /* Slightly larger padding for easier clicking */
+}
+
+.my-tasks-title {
+    color: #007bff; /* Use the primary color for consistency with the application's theme */
+    font-weight: 500; /* Medium font weight for better visibility */
+    font-size: 1.5rem; /* Adjusted font size for clear section demarcation */
+}
+
+/* Ensure existing custom styles for buttons and icons are also included */
 .btn-sm {
     padding: 0.25rem 0.5rem;
-  }
-  
-  .bi {
+}
+
+.bi {
     margin-bottom: 0.125rem;
-  }
-  
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .btn-sm, .btn {
+        width: 100%; /* Full-width buttons on smaller screens */
+        margin: 5px 0; /* Space between buttons when stacked */
+    }
+}
+
+
