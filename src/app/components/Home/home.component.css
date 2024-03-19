@@ -1,0 +1,9 @@
+/* Custom styles for buttons and icons for better alignment and spacing */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .bi {
+    margin-bottom: 0.125rem;
+  }
+  
