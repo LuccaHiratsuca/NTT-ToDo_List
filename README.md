@@ -10,7 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 In the link below you can see the project running:
 
-[My TodoList](ntt-to-do-list.vercel.app)
+[My TodoList Project](https://ntt-to-do-list.vercel.app/)
 
 
 ## What is the project about?
