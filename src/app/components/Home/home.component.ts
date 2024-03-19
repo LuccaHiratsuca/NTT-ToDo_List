@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   newTask: Task = { title: '', description: '', done: false };
   editableTask: Task = { title: '', description: '', done: false };
   editingIndex: number = -1; // To track which task is being edited
+  statusFilter: string = 'all';
 
   // Access the modal element
   @ViewChild('updateModal') updateModal!: ElementRef;
@@ -45,6 +46,12 @@ export class HomeComponent implements OnInit {
       this.tasksService.updateTask(this.editingIndex, this.editableTask);
       this.hideModal();
     }
+  }
+
+  get filteredTasks() {
+    return this.statusFilter === 'all' ? this.tasksService.tasks :
+           this.tasksService.tasks.filter(task => 
+             this.statusFilter === 'done' ? task.done : !task.done);
   }
 
   private showModal() {
